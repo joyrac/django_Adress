@@ -1,0 +1,90 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Index</title>  
+    {% load staticfiles %}  
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>  
+</head>  
+<body>  
+<form method="POST" class="post-form" action="/update/{{users.user_id}}">  
+        {% csrf_token %}  
+    <div class="container">  
+<br>  
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+    <h3>Update Details</h3>  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">User id:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="user_id" id="id_user_id" required maxlength="20" value="{{ users.user_id }}"/>  
+    </div>
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">First Name:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="first_name" id="id_first_name" required maxlength="100" value="{{ users.first_name }}" />  
+    </div> 
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Last Name:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="last_name" id="id_last_name" required maxlength="100" value="{{ users.last_name }}" />  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Date Of Birth:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="DOB" id="id_DOB" required maxlength="100" value="{{ users.DOB }}" />  
+    </div>  
+ 
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">City:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="city" id="id_city" required maxlength="100" value="{{ users.city }}" />  
+    </div>   
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">State:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="state" id="id_state" required maxlength="100" value="{{ users.state }}" />  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Country:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="country" id="id_country" required maxlength="100" value="{{ users.country }}" />  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Pincode:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="pin" id="id_pin" required maxlength="100" value="{{ users.pin }}" />  
+    </div> 
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Email:</label>  
+    <div class="col-sm-4">  
+        <input type="email" name="email" id="id_email" required maxlength="254" value="{{ users.email }}" />  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Mobile:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="mobile" id="id_mobile" required maxlength="15" value="{{ users.mobile }}" />  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+    <button type="submit" class="btn btn-success">Update</button>  
+    </div>  
+  </div>  
+    </div>  
+</form>  
+</body>  
+</html>  
