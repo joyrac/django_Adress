@@ -17,7 +17,8 @@ class Users(models.Model):
     country = models.CharField(max_length=30)  
     pin = models.IntegerField()
     user_name = models.CharField(max_length=20,unique=True)  
-    password  = models.CharField(max_length=30)
+    password = models.CharField(max_length=30)
     class Meta:  
         db_table = "Users"   
+        
     

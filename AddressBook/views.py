@@ -10,10 +10,10 @@ from django.shortcuts import render
 #     return HttpResponse("<h2>Hello, Welcome to Django-Adress Book created by joy!</h2>")  
 # from django.shortcuts import render  
 from AddressBook.form import UseForm  
-#*for normal viewing  
-# def index(request):  
-#     Use = UseForm()  
-#     return render(request,"index.html",{'form':Use})  
+*for normal viewing  
+def index(request):  
+    Use = UseForm()  
+    return render(request,"index.html",{'form':Use})  
 
 
 #**for validations
